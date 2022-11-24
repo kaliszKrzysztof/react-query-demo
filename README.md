@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, run the api
+```bash
+npm run api
+# or
+yarn api
+```
+then run development server:
 
 ```bash
 npm run dev
