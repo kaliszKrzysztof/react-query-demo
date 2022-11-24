@@ -1,26 +1,37 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ReactModal__Overlay {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  @apply z-50;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.ReactModal__Overlay--after-open {
+  opacity: 1;
 }
 
-* {
-  box-sizing: border-box;
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.ReactModal__Content {
+  opacity: 0.3;
+  transition: opacity 200ms ease-in-out;
+  @apply rounded;
+  @apply bg-base-300;
+  @apply p-4;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Content--before-close {
+  opacity: 0.3;
 }
