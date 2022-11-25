@@ -7,7 +7,7 @@ import EditPost from '../../src/components/EditPost';
 
 const PostPage = () => {
   const router = useRouter();
-  const postId = router.query.id;
+  const postId = parseInt(router.query.id, 10);
   const [editPostOpen, setEditPostOpen] = React.useState(false);
   const [state, setState] = React.useReducer((_, action) => action, {
     isLoading: true,
