@@ -20,16 +20,16 @@ const Home = () => {
     }
   }, []);
 
+  React.useEffect(() => {
+    fetch()
+  }, [fetch]);
+
   const handleRemove = React.useCallback((id) => {
-      removePost(id).then(fetch);
+    removePost(id).then(fetch);
   }, [fetch]);
 
   const handleAdd = React.useCallback(post => {
     addPost(post).then(fetch);
-  }, [fetch]);
-
-  React.useEffect(() => {
-    fetch()
   }, [fetch]);
 
   if (state.isLoading) {
