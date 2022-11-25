@@ -23,16 +23,15 @@ const PostPage = () => {
     }
   }, [postId]);
 
-  const handleEdit = React.useCallback((post) => {
-    console.log(post);
-    editPost(post).then(fetch);
-  }, [fetch]);
-
   React.useEffect(() => {
     if (postId) {
       fetch()
     }
   }, [postId, fetch]);
+
+  const handleEdit = React.useCallback((post) => {
+    editPost(post).then(fetch);
+  }, [fetch]);
 
   if (state.isLoading) {
     return (
