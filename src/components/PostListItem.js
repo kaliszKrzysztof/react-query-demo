@@ -4,7 +4,7 @@ import { getImageUrl } from '../utils/image';
 
 const Post = ({ post, onRemove }) => {
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl mb-6">
+    <div className="card md:card-side bg-base-100 shadow-xl mb-6">
       <figure><img src={getImageUrl(post.id, 250, 250)} alt={post.title} /></figure>
       <div className="card-body flex-1">
         <h2 className="card-title">{post.title}</h2>

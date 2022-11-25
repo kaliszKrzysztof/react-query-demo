@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   }, [])
   return (
     <Menu>
-      <main className="lg:container px-4 py-6 mx-auto md:px-6 md:py-12">
+      <main className="container px-4 py-6 mx-auto lg:px-6 lg:py-12">
         <Component {...pageProps} />
       </main>
     </Menu>
