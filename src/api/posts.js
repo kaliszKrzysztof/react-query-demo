@@ -6,7 +6,7 @@ const API_URL = 'http://localhost:3001';
 axios.defaults.baseURL = API_URL;
 
 export const getPosts = () => {
-  return axios.get(`/posts?&_sort=id&_order=desc`).then(res => res.data);
+  return axios.get(`/posts?&_sort=id&_order=desc`).then(res => res.data.map(item => ({ id: item.id, title: item.title, description: item.description })));
 }
 
 export const getPost = (id) => {
