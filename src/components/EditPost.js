@@ -29,7 +29,7 @@ const EditPost = ({ isOpen, onClose, onSave, width = 600, post }) => {
         },
       }}
     >
-      <h2 className="mb-5 text-2xl font-bold">Edit post: {post.id}</h2>
+      <h2 className="mb-5 text-2xl font-bold">Edit post: {post.title}</h2>
       <PostForm
         post={post}
         onSubmit={(post) => {

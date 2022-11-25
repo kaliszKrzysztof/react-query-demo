@@ -22,5 +22,6 @@ export const editPost = (post) => {
 }
 
 export const removePost = (id) => {
+  // throw new Error('Cannot remove...');
   return axios.delete(`/posts/${id}`).then(res => res.data);
 }
